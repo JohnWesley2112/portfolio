@@ -1,0 +1,207 @@
+.about-main-container {
+    /* border: 1px solid green; */
+    position: relative;
+    width: 100%;
+}
+
+.niche-grid-container {
+    /* border: 1px solid black; */
+    position: relative;
+    top: 7vh;
+    left: 10vw;
+    width: 30vw;
+    aspect-ratio: 1;
+}
+
+
+.my-niche {
+    color: lightslategrey;
+    text-align: center;
+}
+
+/* Niche Styles */
+
+.card {
+    /* border: 1px solid #353535; */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    box-shadow: rgba(3, 8, 20, 0.1) 0px 0.15rem 0.5rem,
+        rgba(2, 8, 20, 0.1) 0px 0.075rem 0.175rem;
+    height: 100%;
+    width: 100%;
+    border-radius: 4px;
+    transition: all 150ms;
+    overflow: hidden;
+
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.card:hover {
+    box-shadow: rgba(2, 8, 20, 0.1) 0px 0.35em 1.175em,
+        rgba(2, 8, 20, 0.08) 0px 0.175em 0.5em;
+    transform: translateY(-3px) scale(1.1);
+}
+
+.animated-grid {
+    /* border: 1px solid red; */
+    position: absolute;
+    left: 6%;
+    width: 250px;
+    display: grid;
+    gap: 1rem;
+
+    /* Explicit grid */
+    grid-template-areas:
+        'a b c'
+        'h 🌟 d'
+        'g f e';
+
+    grid-template-rows: repeat(3, 8vmax);
+    grid-template-columns: 8vmax 8vmax 8vmax;
+
+    --stagger-delay: 200ms;
+}
+
+@keyframes cardEntrance {
+    from {
+        opacity: 0;
+        transform: scale(0.3);
+        filter: hue-rotate(180deg);
+    }
+
+    to {
+        opacity: 1;
+        transform: scale(1);
+        filter: hue-rotate(0deg);
+    }
+}
+
+.card {
+    /* background-color: var(--bg-color); */
+    animation: cardEntrance 700ms ease-out;
+    animation-fill-mode: backwards;
+}
+
+.card:nth-child(1) {
+    grid-area: a;
+    animation-delay: calc(1 * var(--stagger-delay));
+}
+
+.card:nth-child(2) {
+    grid-area: b;
+    animation-delay: calc(2 * var(--stagger-delay));
+}
+
+.card:nth-child(3) {
+    grid-area: c;
+    animation-delay: calc(3 * var(--stagger-delay));
+}
+
+.card:nth-child(4) {
+    grid-area: d;
+    animation-delay: calc(4 * var(--stagger-delay));
+}
+
+.card:nth-child(5) {
+    grid-area: e;
+    animation-delay: calc(5 * var(--stagger-delay));
+}
+
+.card:nth-child(6) {
+    grid-area: f;
+    animation-delay: calc(6 * var(--stagger-delay));
+}
+
+.card:nth-child(7) {
+    grid-area: g;
+    animation-delay: calc(7 * var(--stagger-delay));
+}
+
+.card:nth-child(8) {
+    grid-area: h;
+    animation-delay: calc(8 * var(--stagger-delay));
+}
+
+.card:last-child {
+    grid-area: 🌟;
+    animation-delay: calc(9 * var(--stagger-delay));
+}
+
+.p-tags {
+    /* border: 1px solid black; */
+    position: relative;
+    left: 50vw;
+    top: -59.5vh;
+    width: 39vw;
+    height: 60vh;
+}
+
+.about-snippet-container {
+    /* border: 1px solid black; */
+    width: 39vw;
+    font-size: .8rem;
+    line-height: 1.5rem;
+}
+
+.two {
+    margin-top: 4rem;
+    /* top: 39vh; */
+}
+
+.about-snippet-container h2 {
+    /* color: aliceblue; */
+    letter-spacing: -0.05rem;
+}
+
+.about-snippet-container p {
+    line-height: 1.5rem;
+    letter-spacing: 0.1rem;
+}
+
+@media (min-width:1300px) {
+    .p-tags {
+        /* border: 1px solid black; */
+        position: relative;
+        left: 48vw;
+        top: -54vh;
+        width: 39vw;
+        height: 60vh;
+    }
+}
+
+@media (max-width:420px) {
+    .niche-grid-container {
+        top: 1vh;
+        left: 13vw;
+        width: 70vw;
+    }
+
+    .animated-grid {
+        top: 4.5vh;
+        left: 10vw;
+        gap: .5rem;
+        grid-template-rows: repeat(3, 7vmax);
+        grid-template-columns: 7vmax 7vmax 7vmax;
+    }
+
+    .p-tags {
+        /* border: 1px solid black; */
+        position: relative;
+        left: 5vw;
+        top: -1.5vh;
+        width: 90vw;
+        height: 40vh;
+    }
+    .about-snippet-container {
+        /* border: 1px solid black; */
+        /* text-align: center; */
+        width: 90vw;
+        height: 40vh;
+        font-size: .75rem;
+        line-height: 1.3rem;
+    }
+}
