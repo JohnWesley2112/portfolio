@@ -1,7 +1,11 @@
-import React from 'react'
-import "../styles/Header.css"
+import React from 'react';
+import "../styles/Header.css";
 import MyLogo from "../../assets/JW-svg-logo.svg";
 import ContactMe from "../../assets/contactMeLogo.png";
+import { NavLink } from 'react-router-dom';
+
+
+
 
 
 function Header() {
@@ -18,11 +22,21 @@ function Header() {
   return (
     <div className="header-main-container">
       <div>
-        <img id="page-logo" src={MyLogo} alt="my=img" />
+        <NavLink to='/'>
+          <img id="page-logo" src={MyLogo} alt="my=img" />
+        </NavLink>
       </div>
       <ul className='ul-navigation'>
-        <li><h2>About</h2></li>
-        <li><h2>Projects</h2></li>
+        <li>
+          <NavLink to='/about'>
+            <h2 className='mode'>About</h2>
+          </NavLink>
+        </li>
+        <li>
+          <NavLink to='/projects'>
+            <h2 className='mode'>Projects</h2>
+          </NavLink>
+        </li>
       </ul>
       <div>
         <img onClick={handleDisplay} id="contact-me-link-image" src={ContactMe} alt="my=img" />

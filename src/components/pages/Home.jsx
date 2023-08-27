@@ -27,7 +27,7 @@ function Home() {
         </h1>
       </div>
       <div className="intro-container" data-aos="fade-left">
-        <p className="intro">
+        <p className="intro mode">
           I'm a web designer and developer who dwells in Bangalore. My areas
           of interst include User-Interface Design. Having a background in
           Engineering, i'm passionate about connecting the dots between the
