@@ -212,7 +212,7 @@ function App() {
             <input type="text" name="name" placeholder="Your Name" id="" required></input><br></br>
             <input type="email" name="email" placeholder="Email" id="" required></input><br></br>
             <textarea type="text" name="message" rows="6" cols="" placeholder="Message" id="" ></textarea><br></br>
-            <button type="submit" className="btn" value="">Submit <i className="uil uil-angle-right-b"></i></button>
+            <button type="submit" className="btn" value="">Submit <Unicons.UilAngleRightB size="20" /></button>
           </form>
         </div>
       </section>
