@@ -90,8 +90,8 @@ function HeroPage({ handleScroll }) {
                     <Button
                         variant="contained"
                         color="primary"
-                        href="/JohnWesleyResume(Sept2025).pdf"
-                        target="_blank"
+                        href="/portfolio/JohnWesleyResume(Sept2025).pdf"
+                        download
                     >
                         Download Resume
                     </Button>

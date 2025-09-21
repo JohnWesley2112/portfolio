@@ -3,8 +3,9 @@ import HeroImage from '../assets/optimized-images/HeroImage.png'; // Ensure you 
 import AOSCards from '../components/AOSCards';
 import { ArrowRight } from '@mui/icons-material';
 
-function AboutMePage() {
+function AboutMePage({ handleScroll }) {
     return (
+        // <Container sx={{ height: '100%', position: 'relative', overflow: 'hidden' }}>
         <Container sx={{ height: '100%', py: { xs: 2, md: 8 }, }}>
             <Grid container spacing={4} alignItems={'center'} py={{ xs: 1, sm: 5 }}>
                 {/* Content Grid Item */}
@@ -47,6 +48,7 @@ function AboutMePage() {
                             variant="contained"
                             color='primary'
                             size="large"
+                            onClick={() => handleScroll('contact')}
                             endIcon={<ArrowRight fontSize='large' />}
                             sx={{
                                 py: 1.5,

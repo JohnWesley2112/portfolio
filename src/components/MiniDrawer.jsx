@@ -266,8 +266,8 @@ export default function MiniDrawer() {
             }}>
                 <DrawerHeader />
                 <div id="hero"><HeroPage handleScroll={handleScroll} /></div>
-                <div id="about"><AboutMePage /></div>
-                <div id="experience"><AOSCards><ExperiencePage /></AOSCards></div>
+                <div id="about"><AboutMePage handleScroll={handleScroll} /></div>
+                <div id="experience"><ExperiencePage /></div>
                 <div id="projects"><ProjectsPage /></div>
                 <div id="skills"><SkillsPage /></div>
                 <div id="contact"><ContactPage /></div>
